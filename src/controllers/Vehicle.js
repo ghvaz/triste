@@ -19,7 +19,7 @@ export default {
     },
     update: async function(req, res){
         try {
-            let Veiculo = await model.findByIdAndUpdatse({_id: req.params.id}, req.body)    
+            let Veiculo = await model.findByIdAndUpdate({_id: req.params.id}, req.body)    
             res.status(200).json("Veiculo atualizado.")
         } catch (error) {
             res.status(400).json(`ERRO NA ATUALIZAÇÃO:  ${error}`)
